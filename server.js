@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname)));
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-app.post("/symptom-check", async (req, res) => {
+app.post("/api/symptom-check", async (req, res) => {
   const { symptoms } = req.body;
 
   const prompt = `User symptoms: "${symptoms}". Provide a possible diagnosis and treatment advice in simple terms.`;
